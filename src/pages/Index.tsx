@@ -58,19 +58,31 @@ const Index = () => {
         </div>
 
         {/* Partners Section */}
-        <div className="w-full bg-[#1A1F2C]/90 backdrop-blur-md py-8 mt-12">
+        <div className="w-full bg-[#1A1F2C]/90 backdrop-blur-md py-12 mt-12">
           <div className="max-w-4xl mx-auto px-4">
-            <div className="text-center mb-6">
+            <div className="text-center mb-8">
               <h2 className="text-lg font-semibold text-muted-foreground">Supported Exchanges</h2>
               <div className="h-1 w-24 bg-gradient-to-r from-[#9b87f5] to-[#7E69AB] rounded-full mx-auto mt-2" />
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
-              <img src="/lovable-uploads/a607b5b4-8e32-4550-ab9f-31f98651c7c6.png" alt="Binance" className="h-8 opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="/lovable-uploads/4cea30fb-81ac-4c66-909f-0174b427d876.png" alt="Bybit" className="h-8 opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="/lovable-uploads/f304782d-bc02-4dbf-9cef-e320b29237be.png" alt="MEXC" className="h-8 opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="/lovable-uploads/4e4ae1f7-963e-4795-93c9-5f143c4857b3.png" alt="Bitget" className="h-8 opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="/lovable-uploads/74835000-7a7e-44a0-a75f-a9bd9fb664d2.png" alt="OKX" className="h-8 opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="/lovable-uploads/5783acd5-000c-4028-8758-e6066f266ea7.png" alt="Crypto.com" className="h-8 opacity-70 hover:opacity-100 transition-opacity" />
+              <div className="w-32 h-16 flex items-center justify-center p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
+                <img src="/lovable-uploads/a607b5b4-8e32-4550-ab9f-31f98651c7c6.png" alt="Binance" className="max-h-8 w-auto filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity" />
+              </div>
+              <div className="w-32 h-16 flex items-center justify-center p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
+                <img src="/lovable-uploads/4cea30fb-81ac-4c66-909f-0174b427d876.png" alt="Bybit" className="max-h-8 w-auto filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity" />
+              </div>
+              <div className="w-32 h-16 flex items-center justify-center p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
+                <img src="/lovable-uploads/f304782d-bc02-4dbf-9cef-e320b29237be.png" alt="MEXC" className="max-h-8 w-auto filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity" />
+              </div>
+              <div className="w-32 h-16 flex items-center justify-center p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
+                <img src="/lovable-uploads/4e4ae1f7-963e-4795-93c9-5f143c4857b3.png" alt="Bitget" className="max-h-8 w-auto filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity" />
+              </div>
+              <div className="w-32 h-16 flex items-center justify-center p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
+                <img src="/lovable-uploads/74835000-7a7e-44a0-a75f-a9bd9fb664d2.png" alt="OKX" className="max-h-8 w-auto filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity" />
+              </div>
+              <div className="w-32 h-16 flex items-center justify-center p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
+                <img src="/lovable-uploads/5783acd5-000c-4028-8758-e6066f266ea7.png" alt="Crypto.com" className="max-h-8 w-auto filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity" />
+              </div>
             </div>
           </div>
         </div>
