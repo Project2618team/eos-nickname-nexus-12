@@ -26,11 +26,10 @@ const ExchangePartners = () => {
               <img 
                 src={exchange.logo} 
                 alt={exchange.name} 
-                className={`${exchange.invert ? 'filter brightness-0 invert' : ''} opacity-80 hover:opacity-100 transition-opacity`}
+                className={`w-full h-full ${exchange.invert ? 'filter brightness-0 invert' : ''} opacity-80 hover:opacity-100 transition-opacity`}
                 style={{ 
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'scale-down'
+                  objectFit: 'contain',
+                  padding: '2px'
                 }}
               />
             </div>
