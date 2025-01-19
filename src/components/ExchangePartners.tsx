@@ -26,8 +26,8 @@ const ExchangePartners = () => {
               <img 
                 src={exchange.logo} 
                 alt={exchange.name} 
-                className={`w-full h-full object-contain ${exchange.invert ? 'filter brightness-0 invert' : ''} opacity-80 hover:opacity-100 transition-opacity`}
-                style={{ objectFit: 'contain' }}
+                className={`w-full h-full ${exchange.invert ? 'filter brightness-0 invert' : ''} opacity-80 hover:opacity-100 transition-opacity`}
+                style={{ objectFit: 'contain', maxWidth: '100%', maxHeight: '100%' }}
               />
             </div>
           ))}
