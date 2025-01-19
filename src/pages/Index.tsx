@@ -18,8 +18,18 @@ const Index = () => {
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center p-4">
         <main className="w-full max-w-4xl mx-auto backdrop-blur-xl bg-[#1A1F2C]/70 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.25)] border border-white/10 p-6 md:p-8 lg:p-12">
           <div className="text-center mb-12 space-y-4">
-            <h1 className="text-4xl md:text-5xl font-bold gradient-text">
+            <h1 className="text-4xl md:text-5xl font-bold gradient-text flex items-center justify-center gap-4">
+              <img 
+                src="/lovable-uploads/698ad378-426a-49de-a090-159f3d48e61a.png" 
+                alt="EOS Logo" 
+                className="w-10 h-10 md:w-12 md:h-12"
+              />
               EOS AIRDROP 2025
+              <img 
+                src="/lovable-uploads/698ad378-426a-49de-a090-159f3d48e61a.png" 
+                alt="EOS Logo" 
+                className="w-10 h-10 md:w-12 md:h-12"
+              />
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground">
               Create your unique EOS blockchain identity
