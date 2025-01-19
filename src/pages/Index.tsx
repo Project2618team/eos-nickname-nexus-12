@@ -14,6 +14,9 @@ const Index = () => {
           <p className="text-xl text-muted-foreground">
             Create your unique EOS blockchain identity
           </p>
+          <p className="text-xl text-muted-foreground">
+            Generate a unique 12-character EOS nickname using a-z and 1-5
+          </p>
         </div>
         
         <NicknameGenerator />
