@@ -66,7 +66,7 @@ const Index = () => {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
               <div className="w-32 h-16 flex items-center justify-center p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
-                <img src="/lovable-uploads/a607b5b4-8e32-4550-ab9f-31f98651c7c6.png" alt="Binance" className="max-h-8 w-auto filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity" />
+                <img src="/lovable-uploads/80973768-1b3b-4f9f-803e-94f78ed681a9.png" alt="Binance" className="max-h-8 w-auto opacity-80 hover:opacity-100 transition-opacity" />
               </div>
               <div className="w-32 h-16 flex items-center justify-center p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
                 <img src="/lovable-uploads/4cea30fb-81ac-4c66-909f-0174b427d876.png" alt="Bybit" className="max-h-8 w-auto filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity" />
