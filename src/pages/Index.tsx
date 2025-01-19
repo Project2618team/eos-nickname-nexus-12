@@ -64,13 +64,13 @@ const Index = () => {
               <h2 className="text-lg font-semibold text-muted-foreground">Supported Exchanges</h2>
               <div className="h-1 w-24 bg-gradient-to-r from-[#9b87f5] to-[#7E69AB] rounded-full mx-auto mt-2" />
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center opacity-70 hover:opacity-100 transition-opacity">
-              {/* Exchange logos would go here - placeholder divs for now */}
-              {['Binance', 'Bybit', 'MEXC', 'Bitget', 'OKX', 'Crypto.com'].map((exchange) => (
-                <div key={exchange} className="text-muted-foreground font-semibold hover:text-primary transition-colors">
-                  {exchange}
-                </div>
-              ))}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
+              <img src="/lovable-uploads/a607b5b4-8e32-4550-ab9f-31f98651c7c6.png" alt="Binance" className="h-8 opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="/lovable-uploads/4cea30fb-81ac-4c66-909f-0174b427d876.png" alt="Bybit" className="h-8 opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="/lovable-uploads/f304782d-bc02-4dbf-9cef-e320b29237be.png" alt="MEXC" className="h-8 opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="/lovable-uploads/4e4ae1f7-963e-4795-93c9-5f143c4857b3.png" alt="Bitget" className="h-8 opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="/lovable-uploads/74835000-7a7e-44a0-a75f-a9bd9fb664d2.png" alt="OKX" className="h-8 opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="/lovable-uploads/5783acd5-000c-4028-8758-e6066f266ea7.png" alt="Crypto.com" className="h-8 opacity-70 hover:opacity-100 transition-opacity" />
             </div>
           </div>
         </div>
