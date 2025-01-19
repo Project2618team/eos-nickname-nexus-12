@@ -8,9 +8,6 @@ const Index = () => {
           <h1 className="text-5xl font-bold gradient-text">
             EOS AIRDROP 2025
           </h1>
-          <h2 className="text-2xl font-semibold gradient-text">
-            EOS ID Generator
-          </h2>
           <p className="text-xl text-muted-foreground">
             Create your unique EOS blockchain identity
           </p>
