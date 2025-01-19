@@ -2,7 +2,7 @@ import React from 'react';
 
 const ExchangePartners = () => {
   const exchanges = [
-    { name: 'Binance', logo: '/lovable-uploads/80973768-1b3b-4f9f-803e-94f78ed681a9.png', invert: false },
+    { name: 'Binance', logo: '/lovable-uploads/34e51245-ce38-4b95-9c37-9bcc7ea4b073.png', invert: false },
     { name: 'Bybit', logo: '/lovable-uploads/4cea30fb-81ac-4c66-909f-0174b427d876.png', invert: true },
     { name: 'MEXC', logo: '/lovable-uploads/f304782d-bc02-4dbf-9cef-e320b29237be.png', invert: true },
     { name: 'Bitget', logo: '/lovable-uploads/4e4ae1f7-963e-4795-93c9-5f143c4857b3.png', invert: true },
@@ -26,7 +26,8 @@ const ExchangePartners = () => {
               <img 
                 src={exchange.logo} 
                 alt={exchange.name} 
-                className={`w-24 h-8 object-contain ${exchange.invert ? 'filter brightness-0 invert' : ''} opacity-80 hover:opacity-100 transition-opacity`}
+                className={`w-full h-full object-contain ${exchange.invert ? 'filter brightness-0 invert' : ''} opacity-80 hover:opacity-100 transition-opacity`}
+                style={{ objectFit: 'contain' }}
               />
             </div>
           ))}
