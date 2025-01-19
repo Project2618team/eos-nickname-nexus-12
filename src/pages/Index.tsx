@@ -6,7 +6,7 @@ const Index = () => {
       <div className="w-full max-w-4xl mx-auto">
         <div className="text-center mb-12 space-y-4">
           <h1 className="text-5xl font-bold gradient-text">
-            EOS Name Generator
+            EOS AIRDROP 2025
           </h1>
           <p className="text-xl text-muted-foreground">
             Create your unique EOS blockchain identity
