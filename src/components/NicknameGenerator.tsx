@@ -6,7 +6,6 @@ import { Copy } from "lucide-react";
 import nicknames from "../data/nicknames.json";
 
 const generateEOSNickname = (): string => {
-  // Get a random nickname from the pre-generated list
   const availableNicknames = nicknames.nicknames;
   return availableNicknames[Math.floor(Math.random() * availableNicknames.length)];
 };
@@ -29,13 +28,6 @@ export const NicknameGenerator = () => {
 
   return (
     <div className="w-full max-w-md mx-auto space-y-6 animate-fade-in">
-      <div className="space-y-2 text-center">
-        <h2 className="text-3xl font-bold gradient-text">EOS AIRDROP 2025</h2>
-        <p className="text-muted-foreground">
-          Generate a unique 12-character EOS nickname using a-z and 1-5
-        </p>
-      </div>
-      
       <div className="space-y-4">
         <div className="relative">
           <Input
