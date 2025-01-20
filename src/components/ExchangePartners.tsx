@@ -2,12 +2,12 @@ import React from 'react';
 
 const ExchangePartners = () => {
   const exchanges = [
-    { name: 'Binance', logo: '/lovable-uploads/34e51245-ce38-4b95-9c37-9bcc7ea4b073.png', invert: false },
-    { name: 'Bybit', logo: '/lovable-uploads/4cea30fb-81ac-4c66-909f-0174b427d876.png', invert: true },
-    { name: 'MEXC', logo: '/lovable-uploads/f304782d-bc02-4dbf-9cef-e320b29237be.png', invert: true },
-    { name: 'Bitget', logo: '/lovable-uploads/4e4ae1f7-963e-4795-93c9-5f143c4857b3.png', invert: true },
-    { name: 'OKX', logo: '/lovable-uploads/74835000-7a7e-44a0-a75f-a9bd9fb664d2.png', invert: true },
-    { name: 'Crypto.com', logo: '/lovable-uploads/5783acd5-000c-4028-8758-e6066f266ea7.png', invert: true },
+    { name: 'Binance', logo: '/lovable-uploads/27fa3e06-5ce2-4f93-bcca-f05bb55465f5.png', invert: false },
+    { name: 'Bybit', logo: '/lovable-uploads/0f51f26b-9180-4125-9616-8b9414bfa945.png', invert: false },
+    { name: 'MEXC', logo: '/lovable-uploads/fafb7b62-8c3c-4592-87da-51b5ced30a60.png', invert: false },
+    { name: 'Bitget', logo: '/lovable-uploads/bce970da-9d0c-4150-965c-d714734bf57b.png', invert: false },
+    { name: 'OKX', logo: '/lovable-uploads/1273ce5d-adb5-41bb-af62-73acceeb8b10.png', invert: false },
+    { name: 'Crypto.com', logo: '/lovable-uploads/5606e4ed-f1b1-4226-85ee-9184b3f2e978.png', invert: false },
   ];
 
   return (
@@ -26,7 +26,7 @@ const ExchangePartners = () => {
               <img 
                 src={exchange.logo} 
                 alt={exchange.name} 
-                className={`w-full h-full ${exchange.invert ? 'filter brightness-0 invert' : ''} opacity-80 hover:opacity-100 transition-opacity`}
+                className={`w-full h-full object-contain transition-opacity`}
                 style={{ 
                   objectFit: 'contain',
                   padding: '2px'
