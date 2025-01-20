@@ -5,8 +5,19 @@ const Landing = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen w-full bg-[#1A1F2C] text-white">
-      <div className="max-w-6xl mx-auto px-4 py-12 md:py-24">
+    <div className="min-h-screen w-full bg-[#1A1F2C] text-white relative overflow-hidden">
+      <div 
+        className="fixed inset-0 z-0 floating-bg"
+        style={{
+          backgroundImage: "url('/lovable-uploads/3f87d291-b65b-45d7-82e4-5ba642301e9e.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: '0.3'
+        }}
+      />
+      
+      <div className="relative z-10 max-w-6xl mx-auto px-4 py-12 md:py-24">
         <div className="text-center space-y-8">
           <div className="flex justify-center">
             <img 
@@ -16,13 +27,20 @@ const Landing = () => {
             />
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-bold gradient-text">
-            EOS Network Airdrop 2025
-          </h1>
+          <div className="space-y-2">
+            <p className="text-xl md:text-2xl text-[#9b87f5]">SEASON 1</p>
+            <h1 className="text-4xl md:text-6xl font-bold gradient-text">
+              MASSIVE AIRDROP
+            </h1>
+          </div>
           
           <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-            Participate in the official EOS Network airdrop event. Get rewarded with 3.5-11.2% bonus tokens when you transfer your EOS using our nickname system.
+            Powering seamless experiences and real-time connections, EOS is the base for creators who move with purpose
           </p>
+
+          <h2 className="text-2xl md:text-3xl font-bold text-white">
+            GET AN AIRDROP FROM 1 MILLION OF EOS TOKENS!
+          </h2>
           
           <div className="space-y-4">
             <Button 
