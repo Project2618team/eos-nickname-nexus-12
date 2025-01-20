@@ -26,8 +26,10 @@ const ExchangePartners = () => {
               <img 
                 src={exchange.logo} 
                 alt={exchange.name} 
-                className={`w-full h-full object-contain transition-opacity brightness-0 invert`}
+                className="w-full h-full object-cover brightness-0 invert"
                 style={{ 
+                  maxWidth: '100%',
+                  maxHeight: '100%',
                   objectFit: 'contain',
                   padding: '2px'
                 }}
