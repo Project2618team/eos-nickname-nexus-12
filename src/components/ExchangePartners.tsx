@@ -26,7 +26,7 @@ const ExchangePartners = () => {
               <img 
                 src={exchange.logo} 
                 alt={exchange.name} 
-                className={`w-full h-full object-contain transition-opacity`}
+                className={`w-full h-full object-contain transition-opacity brightness-0 invert`}
                 style={{ 
                   objectFit: 'contain',
                   padding: '2px'
