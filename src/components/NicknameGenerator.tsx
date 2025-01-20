@@ -33,7 +33,7 @@ export const NicknameGenerator: React.FC = () => {
       const newNickname = generateEOSNickname();
       setNickname(newNickname);
       setIsGenerated(true);
-      toast.success("New nickname generated!");
+      toast.success("New Account ID generated!");
     } catch (error) {
       toast.error("Failed to generate nickname. Please try again.");
     } finally {
@@ -57,7 +57,7 @@ export const NicknameGenerator: React.FC = () => {
           <Input
             value={nickname}
             readOnly
-            placeholder="Generate your EOS nickname"
+            placeholder="Generate your EOS Account ID"
             className="bg-muted text-lg text-center py-6"
           />
           {nickname && (
@@ -83,7 +83,7 @@ export const NicknameGenerator: React.FC = () => {
               Generating...
             </>
           ) : (
-            'Generate Nickname'
+            'Generate Account ID'
           )}
         </Button>
 
