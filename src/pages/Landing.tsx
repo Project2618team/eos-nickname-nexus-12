@@ -45,7 +45,7 @@ const Landing = () => {
           <div className="space-y-4">
             <Button 
               onClick={() => navigate('/nickname-generator')}
-              className="bg-gradient-to-r from-[#9b87f5] to-[#7E69AB] hover:opacity-90 transition-opacity text-lg px-8 py-6 h-auto"
+              className="bg-gradient-to-r from-[#9b87f5] to-[#7E69AB] hover:opacity-90 transition-opacity text-lg px-8 py-6 h-auto w-64"
             >
               Read More
             </Button>
@@ -53,21 +53,6 @@ const Landing = () => {
             <p className="text-sm text-gray-400">
               Limited time offer • First come, first served
             </p>
-          </div>
-
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-8 items-center">
-            <div className="space-y-2 text-center">
-              <h3 className="text-3xl md:text-4xl font-bold gradient-text">3.5-11.2%</h3>
-              <p className="text-gray-400">Bonus Rewards</p>
-            </div>
-            <div className="space-y-2 text-center">
-              <h3 className="text-3xl md:text-4xl font-bold gradient-text">24/7</h3>
-              <p className="text-gray-400">Support Available</p>
-            </div>
-            <div className="space-y-2 text-center col-span-2 md:col-span-1">
-              <h3 className="text-3xl md:text-4xl font-bold gradient-text">Instant</h3>
-              <p className="text-gray-400">Distribution</p>
-            </div>
           </div>
         </div>
       </div>
