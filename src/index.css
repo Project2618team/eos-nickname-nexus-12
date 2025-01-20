@@ -82,6 +82,7 @@
   width: 100%;
   position: relative;
   overflow: hidden;
+  height: 40px;
 }
 
 .partners-img {
@@ -89,7 +90,7 @@
   width: 200%;
   background-repeat: repeat-x;
   background-position: 0 0;
-  background-size: 50% 100%;
+  background-size: auto 100%;
   animation: slideleft 60s linear infinite;
   filter: grayscale(100%);
   opacity: 0.5;
