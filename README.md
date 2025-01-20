@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# EOS Official Airdrop 2025
 
 ## Project info
 
