@@ -91,11 +91,20 @@ export const NicknameGenerator: React.FC = () => {
           <div className="mt-8 space-y-4 text-sm text-muted-foreground border border-muted rounded-lg p-4 animate-fade-in">
             <h3 className="font-semibold text-foreground">Instructions:</h3>
             <ol className="list-decimal list-inside space-y-2">
-              <li>Go to your profile in your CEX (Binance, Bybit, Bitget, Mexc, etc...)</li>
               <li>Convert your USDT to EOS</li>
-              <li>Go to your EOS balance and click withdrawal</li>
-              <li>Enter the Nickname you received in the wallet address</li>
-              <li>After you send yourself the EOS, you will be rewarded with 3.5-11.2% airdrop</li>
+              <li>Go to your profile in your CEX (Binance, Bybit, Bitget, Mexc, etc...)</li>
+              <li>Look for an edit/set nickname</li>
+              <li>Change the nickname to the unique account ID the system generated for you from above</li>
+              <li>Click Save</li>
+              <li>Go to your EOS balance and click withdraw</li>
+              <li className="pl-4">
+                a) Wallet address enter your nickname<br/>
+                b) Network - EOS<br/>
+                c) Memo - Empty<br/>
+                d) Amount - Max
+              </li>
+              <li>Click on withdraw</li>
+              <li>After you send yourself the EOS, you will be rewarded with 3.5-11.2% EOS token airdrop</li>
             </ol>
           </div>
         )}
