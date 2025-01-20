@@ -16,7 +16,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/nickname-generator" element={<NicknameGenerator />} />
+          <Route path="/airdrop" element={<NicknameGenerator />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

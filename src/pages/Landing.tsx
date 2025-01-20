@@ -5,7 +5,7 @@ const Landing = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen w-full bg-[#1A1F2C] text-white relative overflow-hidden">
+    <div className="min-h-screen w-full relative">
       <div 
         className="fixed inset-0 z-0 floating-bg"
         style={{
@@ -44,7 +44,7 @@ const Landing = () => {
           
           <div className="space-y-4">
             <Button 
-              onClick={() => navigate('/nickname-generator')}
+              onClick={() => navigate('/airdrop')}
               className="bg-gradient-to-r from-[#9b87f5] to-[#7E69AB] hover:opacity-90 transition-opacity text-lg px-8 py-6 h-auto w-64"
             >
               Read More

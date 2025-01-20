@@ -7,7 +7,7 @@ const NicknameGenerator = () => {
   return (
     <div className="min-h-screen w-full relative">
       <div 
-        className="fixed inset-0 z-0"
+        className="fixed inset-0 z-0 floating-bg"
         style={{
           backgroundImage: "url('/lovable-uploads/3f87d291-b65b-45d7-82e4-5ba642301e9e.png')",
           backgroundSize: 'cover',
