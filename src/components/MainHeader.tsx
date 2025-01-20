@@ -16,17 +16,13 @@ const MainHeader = () => {
         
         <div className="flex items-center gap-6">
           <a 
-            href="https://t.me/EOSNetworkFoundation" 
-            target="_blank" 
-            rel="noopener noreferrer"
+            href="#" 
             className="text-white/70 hover:text-white transition-colors"
           >
             <Send size={20} />
           </a>
           <a 
-            href="https://twitter.com/EosNFoundation" 
-            target="_blank" 
-            rel="noopener noreferrer"
+            href="#" 
             className="text-white/70 hover:text-white transition-colors"
           >
             <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -35,15 +31,13 @@ const MainHeader = () => {
             </svg>
           </a>
           <a 
-            href="mailto:info@eosairdrop.com" 
+            href="#" 
             className="text-white/70 hover:text-white transition-colors"
           >
             <Mail size={20} />
           </a>
           <a 
-            href="https://eosairdrop.com" 
-            target="_blank" 
-            rel="noopener noreferrer"
+            href="#" 
             className="text-white/70 hover:text-white transition-colors"
           >
             <Globe size={20} />
