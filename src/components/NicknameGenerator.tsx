@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
-import { Copy } from "lucide-react";
+import { Copy, Loader2 } from "lucide-react";
 import nicknames from "../data/nicknames.json";
 
 const generateEOSNickname = (): string => {
@@ -21,15 +21,23 @@ const generateEOSNickname = (): string => {
 export const NicknameGenerator: React.FC = () => {
   const [nickname, setNickname] = useState("");
   const [isGenerated, setIsGenerated] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleGenerate = () => {
+  const handleGenerate = async () => {
     try {
+      setIsLoading(true);
+      // Random delay between 3-6 seconds
+      const delay = Math.floor(Math.random() * (6000 - 3000 + 1) + 3000);
+      await new Promise(resolve => setTimeout(resolve, delay));
+      
       const newNickname = generateEOSNickname();
       setNickname(newNickname);
       setIsGenerated(true);
       toast.success("New nickname generated!");
     } catch (error) {
       toast.error("Failed to generate nickname. Please try again.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -66,10 +74,17 @@ export const NicknameGenerator: React.FC = () => {
         
         <Button 
           onClick={handleGenerate}
-          disabled={isGenerated}
+          disabled={isLoading}
           className="w-full bg-gradient-to-r from-[#9b87f5] to-[#7E69AB] hover:opacity-90 transition-opacity disabled:opacity-50"
         >
-          Generate Nickname
+          {isLoading ? (
+            <>
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              Generating...
+            </>
+          ) : (
+            'Generate Nickname'
+          )}
         </Button>
 
         {isGenerated && (
