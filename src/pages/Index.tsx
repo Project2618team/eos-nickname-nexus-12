@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen w-full relative">
-      {/* Background image with overlay */}
       <div 
         className="fixed inset-0 z-0"
         style={{
@@ -18,16 +17,11 @@ const Index = () => {
         }}
       />
       
-      {/* Content overlay */}
       <div className="relative z-10 min-h-screen flex flex-col">
-        {/* Main Content */}
         <div className="flex-grow flex flex-col items-center justify-center p-4">
           <main className="w-full max-w-4xl mx-auto backdrop-blur-xl bg-[#1A1F2C]/70 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.25)] border border-white/10 p-6 md:p-8 lg:p-12">
             <Header />
             <NicknameGenerator />
-            <div className="mt-12 text-center text-sm text-muted-foreground">
-              <p>All generated names follow EOS naming conventions</p>
-            </div>
           </main>
         </div>
 

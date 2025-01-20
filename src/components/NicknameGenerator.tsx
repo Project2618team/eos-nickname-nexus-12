@@ -6,24 +6,40 @@ import { Copy } from "lucide-react";
 import nicknames from "../data/nicknames.json";
 
 const generateEOSNickname = (): string => {
-  const availableNicknames = nicknames.nicknames;
-  return availableNicknames[Math.floor(Math.random() * availableNicknames.length)];
+  try {
+    const availableNicknames = nicknames.nicknames;
+    if (!Array.isArray(availableNicknames) || availableNicknames.length === 0) {
+      throw new Error("No nicknames available");
+    }
+    return availableNicknames[Math.floor(Math.random() * availableNicknames.length)];
+  } catch (error) {
+    console.error("Error generating nickname:", error);
+    return "5akw4hmdam4m"; // Fallback default nickname
+  }
 };
 
-export const NicknameGenerator = () => {
+export const NicknameGenerator: React.FC = () => {
   const [nickname, setNickname] = useState("");
   const [isGenerated, setIsGenerated] = useState(false);
 
   const handleGenerate = () => {
-    const newNickname = generateEOSNickname();
-    setNickname(newNickname);
-    setIsGenerated(true);
-    toast.success("New nickname generated!");
+    try {
+      const newNickname = generateEOSNickname();
+      setNickname(newNickname);
+      setIsGenerated(true);
+      toast.success("New nickname generated!");
+    } catch (error) {
+      toast.error("Failed to generate nickname. Please try again.");
+    }
   };
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(nickname);
-    toast.success("Copied to clipboard!");
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(nickname);
+      toast.success("Copied to clipboard!");
+    } catch (error) {
+      toast.error("Failed to copy. Please try manually.");
+    }
   };
 
   return (
