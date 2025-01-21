@@ -1,11 +1,13 @@
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import MainHeader from '@/components/MainHeader';
 
 const Landing = () => {
   const navigate = useNavigate();
 
   return (
     <div className="min-h-screen w-full relative">
+      <MainHeader />
       <div 
         className="fixed inset-0 z-0 floating-bg"
         style={{

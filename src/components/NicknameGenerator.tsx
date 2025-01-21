@@ -57,7 +57,7 @@ export const NicknameGenerator: React.FC = () => {
           <Input
             value={nickname}
             readOnly
-            placeholder="Generate your EOS Account ID"
+            placeholder="Click generate button"
             className="bg-muted text-lg text-center py-6"
           />
           {nickname && (
