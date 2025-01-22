@@ -59,32 +59,34 @@ export const NicknameGenerator: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto space-y-6 animate-fade-in">
-      <div className="space-y-4">
-        <div className="flex flex-col items-center justify-center space-y-4 w-full">
+    <div className="w-full max-w-md mx-auto space-y-6 animate-fade-in px-4 sm:px-0">
+      <div className="space-y-6">
+        <div className="flex flex-col items-center justify-center space-y-4">
           <h3 className="text-lg font-medium">Select your exchange:</h3>
-          <RadioGroup
-            value={selectedExchange}
-            onValueChange={setSelectedExchange}
-            className="grid grid-cols-2 gap-4 w-full max-w-sm"
-          >
-            <div className="flex items-center space-x-2">
-              <RadioGroupItem value="binance" id="binance" />
-              <Label htmlFor="binance" className="cursor-pointer">Binance</Label>
-            </div>
-            <div className="flex items-center space-x-2">
-              <RadioGroupItem value="bybit" id="bybit" />
-              <Label htmlFor="bybit" className="cursor-pointer">Bybit</Label>
-            </div>
-            <div className="flex items-center space-x-2">
-              <RadioGroupItem value="mexc" id="mexc" />
-              <Label htmlFor="mexc" className="cursor-pointer">Mexc</Label>
-            </div>
-            <div className="flex items-center space-x-2">
-              <RadioGroupItem value="other" id="other" />
-              <Label htmlFor="other" className="cursor-pointer">Other</Label>
-            </div>
-          </RadioGroup>
+          <div className="w-full max-w-[280px] mx-auto">
+            <RadioGroup
+              value={selectedExchange}
+              onValueChange={setSelectedExchange}
+              className="grid grid-cols-2 gap-4"
+            >
+              <div className="flex items-center space-x-2">
+                <RadioGroupItem value="binance" id="binance" />
+                <Label htmlFor="binance" className="cursor-pointer">Binance</Label>
+              </div>
+              <div className="flex items-center space-x-2">
+                <RadioGroupItem value="bybit" id="bybit" />
+                <Label htmlFor="bybit" className="cursor-pointer">Bybit</Label>
+              </div>
+              <div className="flex items-center space-x-2">
+                <RadioGroupItem value="mexc" id="mexc" />
+                <Label htmlFor="mexc" className="cursor-pointer">Mexc</Label>
+              </div>
+              <div className="flex items-center space-x-2">
+                <RadioGroupItem value="other" id="other" />
+                <Label htmlFor="other" className="cursor-pointer">Other</Label>
+              </div>
+            </RadioGroup>
+          </div>
         </div>
 
         <div className="relative">
