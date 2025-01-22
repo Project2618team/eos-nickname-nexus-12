@@ -62,12 +62,12 @@ export const NicknameGenerator: React.FC = () => {
     <div className="w-full max-w-md mx-auto space-y-6 animate-fade-in px-4 sm:px-0">
       <div className="space-y-6">
         <div className="flex flex-col items-center justify-center space-y-4">
-          <h3 className="text-lg font-medium">Select your exchange:</h3>
-          <div className="w-full max-w-[280px] mx-auto">
+          <h3 className="text-lg font-medium text-center">Select your exchange:</h3>
+          <div className="w-full max-w-[320px] mx-auto">
             <RadioGroup
               value={selectedExchange}
               onValueChange={setSelectedExchange}
-              className="grid grid-cols-2 gap-4"
+              className="grid grid-cols-2 gap-6 justify-items-center"
             >
               <div className="flex items-center space-x-2">
                 <RadioGroupItem value="binance" id="binance" />
