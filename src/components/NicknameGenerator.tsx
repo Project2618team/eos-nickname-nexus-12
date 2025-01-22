@@ -73,8 +73,9 @@ export const NicknameGenerator: React.FC = () => {
   };
 
   const getExchangeScreenshots = () => {
+    if (!selectedExchange) return [];
     if (selectedExchange === 'other') {
-      return [...exchangeScreenshots.bybit];
+      return exchangeScreenshots.bybit;
     }
     return exchangeScreenshots[selectedExchange as keyof typeof exchangeScreenshots] || [];
   };
@@ -144,21 +145,13 @@ export const NicknameGenerator: React.FC = () => {
           )}
         </Button>
 
-        {isGenerated && (
+        {isGenerated && selectedExchange && (
           <div className="mt-8 space-y-4 animate-fade-in">
-            {selectedExchange && getExchangeScreenshots().map((screenshot, index) => (
+            {getExchangeScreenshots().map((screenshot, index) => (
               <img 
                 key={index}
                 src={screenshot} 
                 alt={`Step ${index + 1}`}
-                className="rounded-lg border border-muted mt-2 w-full"
-              />
-            ))}
-            {exchangeScreenshots.general.map((screenshot, index) => (
-              <img 
-                key={`general-${index}`}
-                src={screenshot} 
-                alt={`General Step ${index + 1}`}
                 className="rounded-lg border border-muted mt-2 w-full"
               />
             ))}
