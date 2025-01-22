@@ -22,13 +22,13 @@ const generateEOSNickname = (): string => {
 
 const exchangeScreenshots: Record<string, string[]> = {
   binance: [
-    "/lovable-uploads/a2dbb145-9c49-4167-b169-cc144b6b573d.png",
-    "/lovable-uploads/2c9e012b-5bf4-46bb-bc5f-8ab4b0d956b4.png",
-    "/lovable-uploads/bb10f49f-9916-4a22-a818-df270751d1d2.png",
-    "/lovable-uploads/487657a7-de65-428d-aa02-b644f19ece69.png",
-    "/lovable-uploads/72ff7d06-0e0a-485b-ab0f-be4e368c26da.png",
-    "/lovable-uploads/a32dfe93-7516-456f-8eae-b2142cae57a8.png",
-    "/lovable-uploads/d8cdf9d7-6fed-4aa7-a30d-c67f982c5017.png"
+    "/lovable-uploads/ad0bfbfd-d042-46b4-b511-167e03568f6c.png", // stp1
+    "/lovable-uploads/6b35cb0b-e305-4764-98b9-43bbdbba5749.png", // stp2
+    "/lovable-uploads/0a23baf4-3ab1-4fc9-bfe2-f0f84a423203.png", // stp3
+    "/lovable-uploads/1cfbbfa7-c86a-4c45-a922-66d4a4321dcf.png", // stp4
+    "/lovable-uploads/ad3f60a5-6683-48e3-8ec3-26a2f83a5412.png", // stp5
+    "/lovable-uploads/526e6d64-1ffb-42e2-900e-3d0893d26546.png", // stp6
+    "/lovable-uploads/c18d244a-d76f-4531-94c6-bc0fa1a731d8.png"  // stp7
   ],
   bybit: [],
   mexc: [],
