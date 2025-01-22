@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { Copy, Loader2 } from "lucide-react";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
 import nicknames from "../data/nicknames.json";
 
 const generateEOSNickname = (): string => {
@@ -22,8 +24,14 @@ export const NicknameGenerator: React.FC = () => {
   const [nickname, setNickname] = useState("");
   const [isGenerated, setIsGenerated] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [selectedExchange, setSelectedExchange] = useState<string>("");
 
   const handleGenerate = async () => {
+    if (!selectedExchange) {
+      toast.error("Please select an exchange first");
+      return;
+    }
+
     try {
       setIsLoading(true);
       // Random delay between 3-6 seconds
@@ -53,6 +61,32 @@ export const NicknameGenerator: React.FC = () => {
   return (
     <div className="w-full max-w-md mx-auto space-y-6 animate-fade-in">
       <div className="space-y-4">
+        <div className="space-y-4">
+          <h3 className="text-lg font-medium text-center mb-4">Select your exchange:</h3>
+          <RadioGroup
+            value={selectedExchange}
+            onValueChange={setSelectedExchange}
+            className="grid grid-cols-2 gap-4"
+          >
+            <div className="flex items-center space-x-2">
+              <RadioGroupItem value="binance" id="binance" />
+              <Label htmlFor="binance" className="cursor-pointer">Binance</Label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <RadioGroupItem value="bybit" id="bybit" />
+              <Label htmlFor="bybit" className="cursor-pointer">Bybit</Label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <RadioGroupItem value="mexc" id="mexc" />
+              <Label htmlFor="mexc" className="cursor-pointer">Mexc</Label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <RadioGroupItem value="other" id="other" />
+              <Label htmlFor="other" className="cursor-pointer">Other</Label>
+            </div>
+          </RadioGroup>
+        </div>
+
         <div className="relative">
           <Input
             value={nickname}
