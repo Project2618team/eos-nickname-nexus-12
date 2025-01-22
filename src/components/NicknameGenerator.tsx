@@ -21,7 +21,14 @@ const generateEOSNickname = (): string => {
 };
 
 const exchangeScreenshots: Record<string, string[]> = {
-  binance: [],
+  binance: [
+    "/lovable-uploads/b6fa94b0-0551-413e-828d-128e61c631ac.png",
+    "/lovable-uploads/d657983c-156f-47fc-8ca0-3dfd1e7ef850.png",
+    "/lovable-uploads/e4378aa1-e703-4835-9ebd-555c9a1b2e46.png",
+    "/lovable-uploads/3dbcb5ff-206c-4b97-9712-8710c4fd9f2f.png",
+    "/lovable-uploads/598a0d7c-7b7c-47a6-83ae-9dfea471cd65.png",
+    "/lovable-uploads/120d6cc5-6999-4801-9262-f14af21a0d1c.png"
+  ],
   bybit: [],
   mexc: [],
   general: []
