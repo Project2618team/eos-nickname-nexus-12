@@ -28,7 +28,14 @@ const exchangeScreenshots: Record<string, string[]> = {
     "/lovable-uploads/3dbcb5ff-206c-4b97-9712-8710c4fd9f2f.png",
     "/lovable-uploads/598a0d7c-7b7c-47a6-83ae-9dfea471cd65.png",
     "/lovable-uploads/120d6cc5-6999-4801-9262-f14af21a0d1c.png"
-  ],
+  ].sort((a, b) => {
+    // Extract step numbers from filenames if they exist
+    const getStepNumber = (filename: string) => {
+      const match = filename.match(/stp(\d+)/);
+      return match ? parseInt(match[1]) : 999; // Default to high number if no step found
+    };
+    return getStepNumber(a) - getStepNumber(b);
+  }),
   bybit: [],
   mexc: [],
   general: []
