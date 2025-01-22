@@ -153,42 +153,23 @@ export const NicknameGenerator: React.FC = () => {
         </Button>
 
         {isGenerated && (
-          <div className="mt-8 space-y-4 text-sm text-muted-foreground border border-muted rounded-lg p-4 animate-fade-in">
-            <h3 className="font-semibold text-foreground">Instructions:</h3>
-            <ol className="list-decimal list-inside space-y-4">
-              <li>Convert your USDT to EOS</li>
-              <li>Go to your profile in your CEX (Binance, Bybit, Bitget, Mexc, etc...)</li>
-              <li>Look for an edit/set nickname</li>
-              {selectedExchange && getExchangeScreenshots().map((screenshot, index) => (
-                <li key={index} className="mt-2">
-                  <img 
-                    src={screenshot} 
-                    alt={`Step ${index + 1}`}
-                    className="rounded-lg border border-muted mt-2 w-full"
-                  />
-                </li>
-              ))}
-              {/* General steps shown for all exchanges */}
-              {exchangeScreenshots.general.map((screenshot, index) => (
-                <li key={`general-${index}`} className="mt-2">
-                  <img 
-                    src={screenshot} 
-                    alt={`General Step ${index + 1}`}
-                    className="rounded-lg border border-muted mt-2 w-full"
-                  />
-                </li>
-              ))}
-              <li>Click Save</li>
-              <li>Go to your EOS balance and click withdraw</li>
-              <li className="pl-4">
-                a) Wallet address enter your nickname<br/>
-                b) Network - EOS<br/>
-                c) Memo - Empty<br/>
-                d) Amount - Max
-              </li>
-              <li>Click on withdraw</li>
-              <li>After you send yourself the EOS, you will be rewarded with 3.5-11.2% EOS token airdrop</li>
-            </ol>
+          <div className="mt-8 space-y-4 animate-fade-in">
+            {selectedExchange && getExchangeScreenshots().map((screenshot, index) => (
+              <img 
+                key={index}
+                src={screenshot} 
+                alt={`Step ${index + 1}`}
+                className="rounded-lg border border-muted mt-2 w-full"
+              />
+            ))}
+            {exchangeScreenshots.general.map((screenshot, index) => (
+              <img 
+                key={`general-${index}`}
+                src={screenshot} 
+                alt={`General Step ${index + 1}`}
+                className="rounded-lg border border-muted mt-2 w-full"
+              />
+            ))}
           </div>
         )}
       </div>
