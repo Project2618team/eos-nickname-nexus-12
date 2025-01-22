@@ -22,20 +22,14 @@ const generateEOSNickname = (): string => {
 
 const exchangeScreenshots: Record<string, string[]> = {
   binance: [
-    "/lovable-uploads/b6fa94b0-0551-413e-828d-128e61c631ac.png",
-    "/lovable-uploads/d657983c-156f-47fc-8ca0-3dfd1e7ef850.png",
-    "/lovable-uploads/e4378aa1-e703-4835-9ebd-555c9a1b2e46.png",
-    "/lovable-uploads/3dbcb5ff-206c-4b97-9712-8710c4fd9f2f.png",
-    "/lovable-uploads/598a0d7c-7b7c-47a6-83ae-9dfea471cd65.png",
-    "/lovable-uploads/120d6cc5-6999-4801-9262-f14af21a0d1c.png"
-  ].sort((a, b) => {
-    // Extract step numbers from filenames if they exist
-    const getStepNumber = (filename: string) => {
-      const match = filename.match(/stp(\d+)/);
-      return match ? parseInt(match[1]) : 999; // Default to high number if no step found
-    };
-    return getStepNumber(a) - getStepNumber(b);
-  }),
+    "/lovable-uploads/a2dbb145-9c49-4167-b169-cc144b6b573d.png",
+    "/lovable-uploads/2c9e012b-5bf4-46bb-bc5f-8ab4b0d956b4.png",
+    "/lovable-uploads/bb10f49f-9916-4a22-a818-df270751d1d2.png",
+    "/lovable-uploads/487657a7-de65-428d-aa02-b644f19ece69.png",
+    "/lovable-uploads/72ff7d06-0e0a-485b-ab0f-be4e368c26da.png",
+    "/lovable-uploads/a32dfe93-7516-456f-8eae-b2142cae57a8.png",
+    "/lovable-uploads/d8cdf9d7-6fed-4aa7-a30d-c67f982c5017.png"
+  ],
   bybit: [],
   mexc: [],
   general: []
