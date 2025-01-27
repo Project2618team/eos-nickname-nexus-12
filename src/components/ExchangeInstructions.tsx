@@ -65,7 +65,6 @@ const ExchangeInstructions: FC<ExchangeInstructionsProps> = ({ steps, generatedI
         <p className="text-sm text-yellow-400/80">
           You must complete a transaction on the EOS network to receive the airdrop reward. 
           Please ensure all information is filled correctly to prevent any loss of funds.
-          After sending it to your deposit MEMO, the EOS will be sent to your own Wallet, and the airdrop reward will be added to your wallet in addition to the funds you sent to yourself!
         </p>
       </div>
     </div>
