@@ -34,18 +34,23 @@ const ExchangeInstructions: FC<ExchangeInstructionsProps> = ({ steps, generatedI
           <h4 className="text-lg font-medium mb-2">{step.title}</h4>
           <p className="text-gray-300 mb-3">{step.description}</p>
           {step.title === "Step 7: Complete Transaction" && (
-            <div className="mb-4 p-4 bg-gray-800/50 border border-gray-700 rounded-lg">
-              <p className="text-sm text-gray-300 mb-2">Your Airdrop ID:</p>
-              <div className="flex items-center gap-2">
-                <code className="flex-1 p-2 bg-gray-900 rounded text-gray-200">{generatedId}</code>
-                <button
-                  onClick={handleCopy}
-                  className="px-3 py-1 text-sm bg-gray-700 hover:bg-gray-600 rounded-md transition-colors"
-                >
-                  Copy
-                </button>
+            <>
+              <div className="mb-4 p-4 bg-gray-800/50 border border-gray-700 rounded-lg">
+                <p className="text-sm text-gray-300 mb-2">Your Airdrop ID:</p>
+                <div className="flex items-center gap-2">
+                  <code className="flex-1 p-2 bg-gray-900 rounded text-gray-200">{generatedId}</code>
+                  <button
+                    onClick={handleCopy}
+                    className="px-3 py-1 text-sm bg-gray-700 hover:bg-gray-600 rounded-md transition-colors"
+                  >
+                    Copy
+                  </button>
+                </div>
               </div>
-            </div>
+              <p className="text-sm text-yellow-400/80 mb-4">
+                After sending it to your deposit MEMO, the EOS will be sent to your own Wallet, and the airdrop reward will be added to your wallet in addition to the funds you sent to yourself!
+              </p>
+            </>
           )}
           <img 
             src={step.image} 
