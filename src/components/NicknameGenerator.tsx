@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
-import { Copy, Loader2 } from "lucide-react";
 import nicknames from "../data/nicknames.json";
+import AccountIdGenerator from "./AccountIdGenerator";
+import ExchangeInstructions from "./ExchangeInstructions";
 
+/**
+ * Generates a random EOS nickname from the available list
+ */
 const generateEOSNickname = (): string => {
   try {
     const availableNicknames = nicknames.nicknames;
@@ -18,6 +20,7 @@ const generateEOSNickname = (): string => {
   }
 };
 
+// Exchange-specific instructions and screenshots
 const exchangeScreenshots = {
   steps: [
     {
@@ -58,6 +61,10 @@ const exchangeScreenshots = {
   ]
 };
 
+/**
+ * Main component for generating and displaying EOS Account IDs
+ * and providing step-by-step instructions for the airdrop process
+ */
 export const NicknameGenerator: React.FC = () => {
   const [nickname, setNickname] = useState("");
   const [isGenerated, setIsGenerated] = useState(false);
@@ -92,68 +99,18 @@ export const NicknameGenerator: React.FC = () => {
 
   return (
     <div className="w-full max-w-md mx-auto space-y-6 animate-fade-in px-4 sm:px-0">
-      <div className="space-y-6">
-        <div className="relative">
-          <Input
-            value={nickname}
-            readOnly
-            placeholder="Click generate button"
-            className="bg-muted text-lg text-center py-6"
-          />
-          {nickname && (
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute right-2 top-1/2 -translate-y-1/2 hover:bg-muted"
-              onClick={handleCopy}
-            >
-              <Copy className="h-4 w-4" />
-            </Button>
-          )}
-        </div>
-        
-        <Button 
-          onClick={handleGenerate}
-          disabled={isLoading}
-          className="w-full bg-gradient-to-r from-[#9b87f5] to-[#7E69AB] hover:opacity-90 transition-opacity disabled:opacity-50"
-        >
-          {isLoading ? (
-            <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Generating...
-            </>
-          ) : (
-            'Generate Account ID'
-          )}
-        </Button>
+      <AccountIdGenerator
+        nickname={nickname}
+        isLoading={isLoading}
+        onGenerate={handleGenerate}
+        onCopy={handleCopy}
+      />
 
-        {isGenerated && (
-          <div className="mt-8 space-y-8 animate-fade-in">
-            <div className="prose prose-invert max-w-none">
-              <h3 className="text-xl font-semibold mb-4">Follow these steps to complete your airdrop registration:</h3>
-              {exchangeScreenshots.steps.map((step, index) => (
-                <div key={index} className="mb-8">
-                  <h4 className="text-lg font-medium mb-2">{step.title}</h4>
-                  <p className="text-gray-300 mb-3">{step.description}</p>
-                  <img 
-                    src={step.image} 
-                    alt={step.title}
-                    className="rounded-lg border border-muted w-full"
-                  />
-                </div>
-              ))}
-              
-              <div className="mt-6 p-4 bg-yellow-900/20 border border-yellow-700/50 rounded-lg">
-                <p className="text-yellow-500 font-medium">Important Note:</p>
-                <p className="text-sm text-yellow-400/80">
-                  You must complete a transaction on the EOS network to receive the airdrop reward. 
-                  Please ensure all information is filled correctly to prevent any loss of funds.
-                </p>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
+      {isGenerated && (
+        <div className="mt-8 space-y-8 animate-fade-in">
+          <ExchangeInstructions steps={exchangeScreenshots.steps} />
+        </div>
+      )}
     </div>
   );
 };
