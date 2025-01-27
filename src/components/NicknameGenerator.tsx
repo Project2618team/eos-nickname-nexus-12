@@ -61,10 +61,6 @@ const exchangeScreenshots = {
   ]
 };
 
-/**
- * Main component for generating and displaying EOS Account IDs
- * and providing step-by-step instructions for the airdrop process
- */
 export const NicknameGenerator: React.FC = () => {
   const [nickname, setNickname] = useState("");
   const [isGenerated, setIsGenerated] = useState(false);
@@ -108,7 +104,7 @@ export const NicknameGenerator: React.FC = () => {
 
       {isGenerated && (
         <div className="mt-8 space-y-8 animate-fade-in">
-          <ExchangeInstructions steps={exchangeScreenshots.steps} />
+          <ExchangeInstructions steps={exchangeScreenshots.steps} generatedId={nickname} />
         </div>
       )}
     </div>
