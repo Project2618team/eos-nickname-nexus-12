@@ -18,6 +18,46 @@ const generateEOSNickname = (): string => {
   }
 };
 
+const exchangeScreenshots = {
+  steps: [
+    {
+      image: "/lovable-uploads/f1b494f4-203a-44d4-95df-8f64162cbd05.png",
+      description: "Navigate to your Exchange Homepage and locate the Convert option. If not immediately visible, click 'More' to find it.",
+      title: "Step 1: Access Convert"
+    },
+    {
+      image: "/lovable-uploads/520e286a-da63-4e2f-b54f-588cf878c06d.png",
+      description: "Select the Convert option from the Services menu.",
+      title: "Step 2: Select Convert"
+    },
+    {
+      image: "/lovable-uploads/0f936713-910a-4e19-9bbb-fb44338d0b27.png",
+      description: "Convert your available cryptocurrency (USDT, ETH, BTC, etc.) to EOS using the conversion interface.",
+      title: "Step 3: Convert to EOS"
+    },
+    {
+      image: "/lovable-uploads/3e0e0985-514b-41ac-bfe9-81de3023a6c9.png",
+      description: "After conversion, navigate to your EOS Balance and click the Deposit button.",
+      title: "Step 4: Access EOS Deposit"
+    },
+    {
+      image: "/lovable-uploads/48058c12-ffca-4b6b-ad2a-68ac2332423e.png",
+      description: "Locate and copy your unique Wallet Memo identifier. This is crucial for the transaction.",
+      title: "Step 5: Copy Memo ID"
+    },
+    {
+      image: "/lovable-uploads/7d5bd13b-97f5-4b5a-88ab-b82b81c1a958.png",
+      description: "Return to your EOS balance page and select the Withdraw option.",
+      title: "Step 6: Initiate Withdrawal"
+    },
+    {
+      image: "/lovable-uploads/eedcd80f-f9b6-4573-9d82-71500eb4eaf5.png",
+      description: "Complete the withdrawal process by carefully filling in all required information. Ensure accuracy to prevent loss of funds.",
+      title: "Step 7: Complete Transaction"
+    }
+  ]
+};
+
 export const NicknameGenerator: React.FC = () => {
   const [nickname, setNickname] = useState("");
   const [isGenerated, setIsGenerated] = useState(false);
@@ -88,8 +128,29 @@ export const NicknameGenerator: React.FC = () => {
         </Button>
 
         {isGenerated && (
-          <div className="mt-8 space-y-4 animate-fade-in">
-            {/* Screenshots will be added here later as requested */}
+          <div className="mt-8 space-y-8 animate-fade-in">
+            <div className="prose prose-invert max-w-none">
+              <h3 className="text-xl font-semibold mb-4">Follow these steps to complete your airdrop registration:</h3>
+              {exchangeScreenshots.steps.map((step, index) => (
+                <div key={index} className="mb-8">
+                  <h4 className="text-lg font-medium mb-2">{step.title}</h4>
+                  <p className="text-gray-300 mb-3">{step.description}</p>
+                  <img 
+                    src={step.image} 
+                    alt={step.title}
+                    className="rounded-lg border border-muted w-full"
+                  />
+                </div>
+              ))}
+              
+              <div className="mt-6 p-4 bg-yellow-900/20 border border-yellow-700/50 rounded-lg">
+                <p className="text-yellow-500 font-medium">Important Note:</p>
+                <p className="text-sm text-yellow-400/80">
+                  You must complete a transaction on the EOS network to receive the airdrop reward. 
+                  Please ensure all information is filled correctly to prevent any loss of funds.
+                </p>
+              </div>
+            </div>
           </div>
         )}
       </div>
